@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shoply_app/core/routes/app_pages.dart';
 import 'package:shoply_app/core/utils/images/app_images.dart';
 import 'package:shoply_app/core/utils/theme/app_colors.dart';
