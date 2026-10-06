@@ -29,10 +29,6 @@ class SignupScreen extends StatelessWidget {
       child: Scaffold(
         appBar: CustomAppBar(title: 'Create Account'),
         body: BlocListener<SignupCubit, SignupState>(
-          listenWhen: (previous, current) {
-            return current is! SingupPickImageState ||
-                current is! SingupRemoveImageState;
-          },
           listener: (context, state) {
             if (state is SignupLoadingState) {
               CustomLoading.showDialogLoading(context: context);
