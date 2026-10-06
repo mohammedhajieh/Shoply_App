@@ -15,7 +15,3 @@ class SignupSuccessState extends SignupState {
 
   SignupSuccessState({required this.successMessage});
 }
-
-class SingupPickImageState extends SignupState {}
-
-class SingupRemoveImageState extends SignupState {}
