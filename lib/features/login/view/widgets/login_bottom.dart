@@ -5,9 +5,15 @@ class _LoginBottom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cubit = context.read<LoginCubit>();
     return Column(
       children: [
-        CustomButton(buttonText: 'Login', onPressed: () {}),
+        CustomButton(
+          buttonText: 'Login',
+          onPressed: () {
+            cubit.login();
+          },
+        ),
         SizedBox(height: 50),
         CustomTextButtonWrap(
           text: 'Don\'t have an account?',

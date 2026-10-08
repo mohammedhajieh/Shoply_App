@@ -43,6 +43,9 @@ dependencies:
   dartz: ^0.10.1
   cloud_firestore: ^6.10.0
   pro_dialog: ^1.0.9
+  image_picker: ^1.2.3
+  supabase_flutter: ^2.18.0
+  cached_network_image: ^4.0.3
 
 dev_dependencies:
   flutter_test:

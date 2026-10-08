@@ -3,31 +3,34 @@ import 'package:flutter/material.dart';
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     super.key,
-    required this.title,
+    this.titleText,
     this.actions,
     this.actionsPadding,
     this.leading,
+    this.title,
   });
-  final String title;
+  final String? titleText;
   final List<Widget>? actions;
   final Widget? leading;
   final EdgeInsetsGeometry? actionsPadding;
-
+  final Widget? title;
   @override
   Widget build(BuildContext context) {
     return AppBar(
       actionsPadding: actionsPadding,
       actions: actions,
       leading: leading,
-      title: Text(
-        title,
-        style: TextStyle(
-          fontSize: 25,
-          fontWeight: FontWeight.bold,
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-        ),
-      ),
+      title:
+          title ??
+          Text(
+            titleText ?? '',
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+              fontStyle: FontStyle.normal,
+            ),
+          ),
       centerTitle: true,
     );
   }

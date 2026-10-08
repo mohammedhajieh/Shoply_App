@@ -5,6 +5,8 @@ class _LoginBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cubit = context.read<LoginCubit>();
+
     return Column(
       children: [
         CustomTextField(
@@ -14,7 +16,7 @@ class _LoginBody extends StatelessWidget {
             }
             return null;
           },
-          controller: TextEditingController(),
+          controller: cubit.emailController,
           hinText: 'Email',
           prefixIcon: Icon(
             Icons.email_outlined,
@@ -31,7 +33,7 @@ class _LoginBody extends StatelessWidget {
             return null;
           },
           obscureText: true,
-          controller: TextEditingController(),
+          controller: cubit.passwordController,
           hinText: 'Password',
           prefixIcon: Icon(
             Icons.lock_outline,
